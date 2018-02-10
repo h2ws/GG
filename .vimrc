@@ -18,7 +18,7 @@ set expandtab
 set cindent
 set foldenable
 
-autocomd InsertEnter * se cul
+autocmd InsertEnter * se cul
 
 highlight CursorLine	cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 highlight CursorColumn	cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE

@@ -1,25 +1,16 @@
 syntax on
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set number
-
-set cursorline 
-set cursorcolumn
-
+set nu
 set fenc=utf-8
-set nocompatible
-set matchtime=5
-set statusline=%F%m%r%h%m\[POS=%l,%v][%p%%]\%{strftime(\"%d/%m/%y\-\%H:%H:%M\")}
-set laststatus=2
-set formatoptions=tcrqn
-set autoindent
-set expandtab
-set cindent
-set foldenable
+set softtabstop=4
 
-autocmd InsertEnter * se cul
+set shiftwidth=4
 
-highlight CursorLine	cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-highlight CursorColumn	cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+map <F5> :call RunF()<CR>
 
+    func! RunF()
+	exec "w" 
+if &filetype ==  'dosbatch'
+    exec "!%"
+
+endif
+    endfunc
